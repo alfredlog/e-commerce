@@ -5,7 +5,7 @@ const {ValidationError , UniqueConstraintError} = require("sequelize")
 const multer = require("multer")
 
 const lagerung = multer.diskStorage({
-    destination : (req, file, cb)=>{cb(null, "https://e-commerce-theta-wheat.vercel.app/public/ArtikelnBilde")},
+    destination : (req, file, cb)=>{cb(null, "")},
     filename : (req, file, cb)=>{cb(null, Date.now() + "_"+ file.originalname)}
 })
 
