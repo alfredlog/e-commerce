@@ -3,9 +3,10 @@ const {articles} = require("../../source/db/sequelize")
 const auth = require("../../auth/auth")
 const {ValidationError , UniqueConstraintError} = require("sequelize")
 const multer = require("multer")
+const os = require("os")
 
 const lagerung = multer.diskStorage({
-    destination : (req, file, cb)=>{cb(null, "")},
+    destination : (req, file, cb)=>{cb(null, `${os.homedir}`)},
     filename : (req, file, cb)=>{cb(null, Date.now() + "_"+ file.originalname)}
 })
 
