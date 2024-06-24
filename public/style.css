@@ -1,0 +1,51 @@
+
+form
+{
+    display: flex;
+    flex-direction: column;
+}
+fieldset
+{
+    margin-top: auto;
+    width: 500px;
+    border: solid black 2px;
+    border-radius: 5px;
+    margin: auto;
+    font-size: 20px;
+    background-color: aquamarine;
+}
+textarea
+{
+    border: 2px solid black;
+}
+label
+{
+    margin-bottom: 20px;
+    font-size: large;
+
+}
+input
+{
+    width: 200px;
+    height: 30px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+input[type =submit]
+{
+    height: 30px;
+    width: 150px;
+    background-color: rgb(243, 243, 247);
+    margin: auto;
+    border: solid 2px black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+input[type =submit]:hover
+{
+    background-color: rgb(3, 251, 3);
+}
+.red
+{
+    border-color: rgb(247, 8, 8);
+}

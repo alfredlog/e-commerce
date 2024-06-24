@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <fieldset>
+        <legend>Information de Création de salon de vente</legend>
+        <form action="/logup" method="post" onsubmit="validation()" id="info">
+            <label for="name">Nom complet <br><input type="text" name="name" required></label>
+            <label for="mail">E-mail <br><input type="email" name="email" required></label>
+            <label for="paswort">Mots de passe <br><input type="password" id="mp" name="passwort" required></label>
+            <label for="paswortc">votre mots de passe <br><input id="mpc" type="password" required></label>
+            <label for="mag">Nom de votre salon <br><input type="text" name="geschäft" required></label>
+            <label for="desc">Description de votre salon <br><textarea name="beschreibung" id="" cols="30" rows="10"></textarea></label>
+            <p id="er" class="red" style="font-size: small;"></p>
+            <a href="http://localhost:2000/login">j'ai déjà un compte</a>
+            <input type="submit" value="Validez">
+        </form>
+    </fieldset>
+    <script src="index.js"></script>
+    <script>
+        document.getElementById("info").addEventListener("submit", function(e){
+            let mpc = document.getElementById("mpc")
+            let mp = document.getElementById("mp")
+            console.log(mp)
+            if(mp.value != mpc.value)
+            {
+                var erreur = "les mots de passe ne corespondent pas"
+                mpc.classList += " red"
+                mp.classList += " red"
+                document.getElementById("er").innerHTML = erreur
+                e.preventDefault()
+            }
+        })
+    </script>
+</body>
+</html>

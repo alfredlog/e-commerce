@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset>
+        <form action="/img" method="post" enctype="multipart/form-data">
+            <label for="name">Name :<input type="text" name="name"></label>
+            <label for="preis">Prix<input type="number" name="preis"></label>
+            <label for="Quantitat">Quantité<input type="text" name="Quantitat"></label>
+            <label for="Geschäft">Magasin<input type="text" name="Geschäft"></label>
+            <label for="Beschreibung">Description<input type="text" name="Beschreibung"></label>
+            <label for="bild">Image<input type="file" accept="png" name="bild"></label>
+            <input type="submit" value="Ajouter">
+        </form>
+    </fieldset>
+    <script src="index.js"></script>
+</body>
+</html>
