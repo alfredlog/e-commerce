@@ -10,7 +10,7 @@ const Db = new Sequelize(process.env.POSTGRES_URLV_URL, {
 const articles = artikels(Db, DataTypes)
 const admins = admin(Db, DataTypes)
 const sync = ()=>{
-    Db.sync({force: true})
+    Db.sync({})
      .then(()=>{
       console.log("connecter")
  })
