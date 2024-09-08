@@ -16,7 +16,7 @@ module.exports = (app)=> {
                     if(isPasswordValide)
                     {
                         const token = jt.sign({userId : admin.id},key,{expiresIn:"24h"})
-                        const message = "der benutzer wird mit erflog verbunden "
+                        const message = "der benutzer wurde erflogreich eingeloggt "
                         res.status(200).json({token, message})
                         console.log(token)
                     }
